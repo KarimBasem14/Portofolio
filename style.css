@@ -21,6 +21,11 @@ body {
 }
 
 
+/*------------------------------------ Loading Screen --------------------------------------------*/
+
+
+
+
 
 /*------------------------------------ Nav bar ---------------------------------------------------*/
 
@@ -177,7 +182,7 @@ nav>ul li a:active {
         top: 7px
     }
 
-    /* Hide the nav list by default, show as a rounded panel when toggled */
+    
     nav>ul {
         position: fixed;
         right: 18px;
@@ -193,6 +198,7 @@ nav>ul li a:active {
         flex-direction: column;
         gap: 8px;
         z-index: 99998;
+        height: fit-content;
     }
 
     nav>ul li a {
@@ -283,7 +289,39 @@ nav>ul li a:active {
     margin-top: 12px;
 }
 
-.wrapper {
+/* .wrapper .txt {
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.wrapper .txt.static-txt {
+
+}
+
+.txt.dynamic-txt::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+
+    border-left: 2px solid  white;
+    animation: typing 4s steps(12) infinite;
+}
+
+@keyframes typing {
+    40%, 60% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+} */
+
+/* .wrapper {
     display: flex;
 }
 
@@ -327,7 +365,7 @@ nav>ul li a:active {
         left: 100%;
         margin: 0 -35px 0 35px;
     }
-}
+} */
 
 /* Make sure the starfield canvas doesn't overflow on very small screens */
 .space-canvas {
