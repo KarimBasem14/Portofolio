@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <!-- CSS-only hamburger: hidden checkbox + label button + nav list -->
+            <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
+            <label for="nav-toggle" class="nav-toggle-button" aria-label="Toggle navigation" role="button">
+                <span class="hamburger" aria-hidden="true"></span>
+            </label>
+
+            <ul>
+                <li><a href="#landing">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <svg style="display: none">
+        <defs>
+            <filter id="wave-distort" x="0%" y="0%" width="100%" height="100%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.0038 0.0038" numOctaves="1" seed="2"
+                    result="roughNoise" />
+                <feGaussianBlur in="roughNoise" stdDeviation="8.5" result="softNoise" />
+                <feComposite operator="arithmetic" k1="0" k2="1" k3="2" k4="0" in="softNoise" result="mergedMap" />
+                <feDisplacementMap in="SourceGraphic" in2="mergedMap" scale="-42" xChannelSelector="G"
+                    yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+
+
+
+    <main>
+
+
+        <div id="landing" class="container-fluid landing">
+            <div class="space-canvas">
+                <canvas id="space"></canvas>
+            </div>
+            <h1 class="display-2">Software Engineer</h1>
+            <h2 class="text-muted display-4">Karim Mohamed</h2>
+            <p>I design and develop experiences that make people's lives simple</p>
+            <!-- <div class="wrapper">
+                <div class="static-txt">I study to become</div>
+                <ul class="dynamic-txts">
+                    <li><span>a Software Engineer</span></li>
+                    <li><span>a Better Person</span></li>
+                    <li><span>Better Community Member</span></li>
+                </ul>
+            </div> -->
+            <div class="flex gap-4 mt-4 flex-wrap justify-center">
+                <a href="/contact" data-discover="true"><button
+                        class="group flex items-center cursor-pointer gap-1.5 rounded-full bg-gray-600 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+                        tabindex="0"
+                        style="border: 1px solid rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 4px 24px; transform: none;">Connect
+                        With me<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="transition-transform group-hover:-rotate-45 group-active:-rotate-12" height="1em"
+                            width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg></button></a>
+                <button
+                    class="group cursor-pointer flex items-center gap-1.5 rounded-full bg-gray-600 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+                    tabindex="0"
+                    style="border: 1px solid rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 4px 24px; transform: none;">Download
+                    Resume<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                        class="text-lg" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"></path>
+                    </svg></button>
+            </div>
+        </div>
+
+
+
+        <!-- About -->
+        <section class="about-me container" id="about-me">
+            <h1>About me</h1>
+            <div class="about-me-content">
+                <div class="about-me-text">
+                    <p><strong>Hi, I'm Karim Mohamed Basem</strong> — Computer & Systems Engineering student & freelance
+                        web developer. I build fast, accessible, conversion‑focused websites with clean, maintainable
+                        code and a performance‑first mindset.</p>
+                    <ul class="about-me-highlights">
+                        <li>Landing & marketing pages</li>
+                        <li>Portfolio redesigns</li>
+                        <li>UI polish & performance tuning</li>
+                        <li>Reusable components / features</li>
+                    </ul>
+                    <p><em>Need something shipped right?</em> Let's talk.</p>
+                </div>
+                <div class="about-me-img">
+                    <img src="media/me.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="skills container" id="skills">
+            <h1>What I bring to the table</h1>
+
+            <div class="skills-column">
+                <!-- Row 1: Planet with orbiting tech icons -->
+                <div class="planet-row">
+                    <div class="planet-shell" aria-hidden="true">
+                        <div class="planet" role="img" aria-label="Central planet representing web development">
+                        </div>
+                        <div class="orbit">
+                            <div class="orbit-icon"><img src="media/html-5-svgrepo-com.svg" alt=""></div>
+                            <div class="orbit-icon"><img src="media/css-3-svgrepo-com.svg" alt=""></div>
+                            <div class="orbit-icon"><img src="media/js-svgrepo-com.svg" alt=""></div>
+                            <div class="orbit-icon"><img src="media/react-svgrepo-com.svg" alt=""></div>
+                            <div class="orbit-icon"><img src="media/node-js-svgrepo-com.svg" alt=""></div>
+                            <div class="orbit-icon"><img src="media/github-142-svgrepo-com.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Grid list of tech items -->
+                <div class="skills-list-row">
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="media/html-5-svgrepo-com.svg" alt="HTML"></div>
+                            <div class="skill-name">HTML</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="media/css-3-svgrepo-com.svg" alt="CSS"></div>
+                            <div class="skill-name">CSS</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="media/js-svgrepo-com.svg" alt="JavaScript"></div>
+                            <div class="skill-name">JavaScript</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="media/react-svgrepo-com.svg" alt="React"></div>
+                            <div class="skill-name">React</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="media/node-js-svgrepo-com.svg" alt="Node.js"></div>
+                            <div class="skill-name">Node.js</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="media/github-142-svgrepo-com.svg" alt="GitHub"></div>
+                            <div class="skill-name">Git / GitHub</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section projects container-fluid">
+            <h1>Projects</h1>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-text">
+                        <h3>Finder | Website homepage</h3>
+                        <p>A single page website, made using HTML, CSS and JavaScript.</p>
+                    </div>
+
+                    <div class="project-card-img">
+                        <img src="media/finder project screenshot.png" alt="">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-text">
+                        <h3>Finder clone</h3>
+                        <p>Single-page application built with React and deployed on Netlify. Focus on accessibility and
+                            performance.</p>
+                    </div>
+
+                    <div class="project-card-img">
+                        <img src="media/finder project screenshot.png" alt="">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-text">
+                        <h3>Finder clone</h3>
+                        <p>Single-page application built with React and deployed on Netlify. Focus on accessibility and
+                            performance.</p>
+                    </div>
+
+                    <div class="project-card-img">
+                        <img src="media/finder project screenshot.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <!-- Testimonials (inserted under Projects) -->
+        <section id="testimonials" class="section testimonials container-fluid">
+            <h1>What people say</h1>
+
+            <div class="testimonials-wrap">
+                <ol class="testimonials-slider" aria-live="polite">
+                    <li class="testimonial">
+                        <div class="quote">“A dedicated learner with strong problem-solving skills. He builds solutions with clean structure and clear logic.”</div>
+                        <div class="meta">
+                            <div class="avatar"><img src="media/me.jpg" alt=""></div>
+                            <div class="who">
+                                <div class="name">Osama Elzero</div>
+                                <div class="role">Developer</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="testimonial">
+                        <div class="quote">“Fast, pragmatic and great attention to detail — the results shipped were delightful and performant.”</div>
+                        <div class="meta">
+                            <div class="avatar"><img src="media/me.jpg" alt=""></div>
+                            <div class="who">
+                                <div class="name">Amal Hassan</div>
+                                <div class="role">Product Designer</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="testimonial">
+                        <div class="quote">“A pleasure to collaborate with: communicates clearly, iterates quickly and ships polished UI.”</div>
+                        <div class="meta">
+                            <div class="avatar"><img src="media/me.jpg" alt=""></div>
+                            <div class="who">
+                                <div class="name">Tarek Mahmoud</div>
+                                <div class="role">Engineering Manager</div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+                <nav class="testimonials-dots" aria-hidden="true">
+                    <button class="dot" data-index="0" aria-label="Show testimonial 1"></button>
+                    <button class="dot" data-index="1" aria-label="Show testimonial 2"></button>
+                    <button class="dot" data-index="2" aria-label="Show testimonial 3"></button>
+                </nav>
+            </div>
+        </section>
+        <section id="contact" class="section contact container">
+            <!-- <div class="sun-set-container" style="width: 100%; margin: 0; padding: 0"
+                onmouseup="stopMove();" onresize="windowResize();">
+
+                <div id="starsContainer" onmousedown="startMove();" onmouseup="stopMove();">
+                    <div id="stars" onmousedown="startMove();" onmouseup="stopMove();">
+                    </div>
+                </div>
+
+                <div id="sun" onmousedown="startMove();" onmouseup="stopMove();">
+
+                </div>
+
+                <div id="sunDay" onmousedown="startMove();" onmouseup="stopMove();">
+
+                </div>
+
+                <div id="sunSet" onmousedown="startMove();" onmouseup="stopMove();">
+
+                </div>
+
+                <div id="sky" onmousedown="startMove();" onmouseup="stopMove();">
+
+                </div>
+
+                
+
+                <div id="horizon" onmousedown="startMove();" onmouseup="stopMove();"></div>
+
+                
+
+                
+
+                
+
+                </div>
+
+                <div id="water" onmousedown="startMove();" onmouseup="stopMove();"></div>
+
+                <div id="waterReflectionContainer" onmousedown="startMove();" onmouseup="stopMove();">
+                    <div id="waterReflectionMiddle" onmousedown="startMove();" onmouseup="stopMove();">
+
+                    </div>
+                </div>
+                
+                <div id="oceanRippleContainer">
+                </div>
+                <div id="oceanRipple"></div>
+            </div> -->
+            <h1>Let's <span>connect</span></h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">I'm always eager to connect with fellow
+                developers, potential collaborators, and anyone interested in technology. Whether you have a project
+                idea, want to discuss AI/ML, open source contributions, or just chat about the latest in software
+                engineering, I'd love to hear from you!
+            </p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-mail text-blue-400 group-hover:text-teal-400 transition-colors">
+                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    <h4>Email</h4>
+                    <p>karimbasem14@gmail.com</p>
+                    <button>Send Email</button>
+                </div>
+                <div class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-github text-gray-400 group-hover:text-teal-400 transition-colors">
+                        <path
+                            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                        </path>
+                        <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                    </svg>
+                    <h4>Github</h4>
+                    <p>Check out my open source projects and contributions</p>
+                    <button>Visit GitHub</button>
+                </div>
+                <div class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-linkedin text-blue-500 group-hover:text-teal-400 transition-colors">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect width="4" height="12" x="2" y="9"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <h4>LinkedIn</h4>
+                    <p>Connect with me professionally</p>
+                    <button>View Profile</button>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+
+    <footer>
+        <p>Made with ❤️ by <span>Karim Basem</span></p>
+    </footer>
+
+
+
+    <script src="scripts/background.js"></script>
+    <script src="scripts/animateOnScroll.js"></script>
+    <script src="scripts/navBar.js"></script>
+
+</body>
+
+</html>
