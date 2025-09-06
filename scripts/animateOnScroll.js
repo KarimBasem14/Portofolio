@@ -18,5 +18,6 @@ const observer = new IntersectionObserver( (enteries)=> {
 
 const projectCards = document.querySelectorAll(".project-card");
 
+
 // Observe (listen) to the project cards
-projectCards.forEach(el => observer.observe(el))
+projectCards.forEach(el => observer.observe(el));

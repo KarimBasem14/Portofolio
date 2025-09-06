@@ -1050,8 +1050,7 @@ section h1 {
 }
 
 /* Reveal helpers (the page currently adds .show/.in-view via JS; keep both selectors) */
-.project-card.show,
-.project-card.in-view {
+.project-card.show {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
