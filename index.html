@@ -61,26 +61,20 @@
                 <span class="txt dynamic-txt"></span>
             </div> -->
             <div class="flex gap-4 mt-4 flex-wrap justify-center">
-                <a href="/contact" data-discover="true"><button
-                        class="group flex items-center cursor-pointer gap-1.5 rounded-full bg-gray-600 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
-                        tabindex="0"
-                        style="border: 1px solid rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 4px 24px; transform: none;">Connect
-                        With me<svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
-                            stroke-linecap="round" stroke-linejoin="round"
-                            class="transition-transform group-hover:-rotate-45 group-active:-rotate-12" height="1em"
-                            width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg></button></a>
-                <button
-                    class="group cursor-pointer flex items-center gap-1.5 rounded-full bg-gray-600 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
-                    tabindex="0"
-                    style="border: 1px solid rgb(0, 0, 0); box-shadow: rgb(0, 0, 0) 0px 4px 24px; transform: none;">Download
-                    Resume<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                        class="text-lg" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <a href="#contact" data-discover="true" class="cta-btn cta-primary" tabindex="0" aria-label="Go to contact section">
+                    Connect With me
+                    <svg class="cta-icon" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a class="cta-btn cta-secondary" href="media/KarimBasem CV.pdf" download="Karim_Basem_CV.pdf" tabindex="0" aria-label="Download resume PDF">
+                    Download Resume
+                    <svg class="cta-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                         <path fill="none" d="M0 0h24v24H0z"></path>
                         <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"></path>
-                    </svg></button>
+                    </svg>
+                </a>
             </div>
         </div>
 
@@ -92,11 +86,16 @@
             <div class="about-me-content">
                 <div class="about-me-text">
                     <p><strong>Hi, I'm Karim Mohamed Basem</strong> — Computer & Systems Engineering student & freelance
-                        web developer. I build fast, accessible, conversion‑focused websites with clean, maintainable
+                        web developer.
+                        <br>
+                        I have always had a passion for coding and creating solutions that change
+                        people's lives and leaves a great impact on humanity!
+                        <br>
+                        I currently build fast, accessible, conversion‑focused websites that solve real-life problems with clean, maintainable
                         code and a performance‑first mindset.</p>
                     <ul class="about-me-highlights">
+                        <li>Full Stack Web Apps</li>
                         <li>Landing & marketing pages</li>
-                        <li>Portfolio redesigns</li>
                         <li>UI polish & performance tuning</li>
                         <li>Reusable components / features</li>
                     </ul>
@@ -123,7 +122,7 @@
                             <div class="orbit-icon"><img src="media/js-svgrepo-com.svg" alt=""></div>
                             <div class="orbit-icon"><img src="media/react-svgrepo-com.svg" alt=""></div>
                             <div class="orbit-icon"><img src="media/node-js-svgrepo-com.svg" alt=""></div>
-                            <div class="orbit-icon"><img src="media/github-142-svgrepo-com.svg" alt=""></div>
+                            <div class="orbit-icon"><img class="github-icon" src="media/github-142-svgrepo-com.svg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -152,8 +151,16 @@
                             <div class="skill-name">Node.js</div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon"><img src="media/github-142-svgrepo-com.svg" alt="GitHub"></div>
+                            <div class="skill-icon github-icon"><img src="media/github-142-svgrepo-com.svg" alt="GitHub"></div>
                             <div class="skill-name">Git / GitHub</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="media/tailwind-svgrepo-com.svg" alt="Tailwind CSS"></div>
+                            <div class="skill-name">Tailwind CSS</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="media/vue-vuejs-javascript-js-framework-svgrepo-com.svg" alt="Vue.js"></div>
+                            <div class="skill-name">Vue.js</div>
                         </div>
                     </div>
                 </div>
@@ -169,6 +176,15 @@
                     <div class="project-card-text">
                         <h3>Finder | Website homepage</h3>
                         <p>A single page website, made using HTML, CSS and JavaScript.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="#" target="_blank" rel="noopener">
+                                Check it out
+                                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="project-card-img">
@@ -180,6 +196,15 @@
                         <h3>Finder clone</h3>
                         <p>Single-page application built with React and deployed on Netlify. Focus on accessibility and
                             performance.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="#" target="_blank" rel="noopener">
+                                Check it out
+                                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="project-card-img">
@@ -191,6 +216,15 @@
                         <h3>Finder clone</h3>
                         <p>Single-page application built with React and deployed on Netlify. Focus on accessibility and
                             performance.</p>
+                        <div class="project-actions">
+                            <a class="project-link" href="#" target="_blank" rel="noopener">
+                                Check it out
+                                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="project-card-img">
@@ -214,12 +248,13 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active c-item">
                         <div class="c-item-content-wrapper">
-                            <p>"A dedicated learner with strong problem-solving skills. He doesn’t just code; he builds
-                                solutions with clean structure and clear logic."</p>
+                            <p>“I’ve known Karim for a long time, and I can tell you the best thing about him is that
+                                he’s got a really big heart. He’s also ambitious, persistent, and hardworking
+                                more than anyone .”</p>
                             <div class="testimonial-person">
-                                <img src="media/me.jpg" alt="Karim Mohamed portrait">
+                                <img src="media/mohamed_abdAllah.jpeg" alt="Karim Mohamed portrait">
                                 <div class="testimonial-person-name">
-                                    <p>Karim Mohamed</p>
+                                    <p>Mohamed AbdAllah</p>
                                     <span>Software Engineer</span>
                                 </div>
                             </div>
@@ -347,6 +382,21 @@
 
     <footer>
         <p>Made with ❤️ by <span>Karim Basem</span></p>
+        <div class="footer-social" role="navigation" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/karimbasem14" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="media/linkedin-svgrepo-com.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/KarimBasem14" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="media/github-142-svgrepo-com.svg" alt="GitHub">
+            </a>
+            <a href="https://www.upwork.com/freelancers/~01972d8f8f878548b3" target="_blank" rel="noopener" aria-label="Upwork" title="Upwork">
+                <!-- Simple Upwork placeholder icon (green circle with U) -->
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="11" fill="#6fda44" />
+                    <text x="12" y="16" text-anchor="middle" font-size="12" font-family="Arial, Helvetica, sans-serif" fill="#0a0a0a" font-weight="700">U</text>
+                </svg>
+            </a>
+        </div>
     </footer>
 
 
